@@ -1,0 +1,115 @@
+:root {
+  --sky: #2a62c9;
+  --sky2: #7fb4f2;
+  --court: #2b6cc8;
+  --runoff: #2a8a6a;
+  --optic: #dcff2b;
+  --gold: #ffd22e;
+  --ink: #0d1b33;
+  --paper: #f6f8fc;
+  --line: #ffffff;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: "Nunito", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+a { color: inherit; }
+img, video { max-width: 100%; display: block; }
+
+/* ---------- hero: sky over court, like the game's own frame ---------- */
+.hero {
+  color: #fff;
+  /* Sky, then a strip of court along the bottom with its white baseline. */
+  background:
+    linear-gradient(180deg, transparent calc(100% - 64px), var(--line) calc(100% - 64px), var(--line) calc(100% - 58px), transparent calc(100% - 58px)),
+    linear-gradient(180deg, var(--sky) 0%, #4a86dc 60%, var(--sky2) calc(100% - 96px), var(--runoff) calc(100% - 96px), var(--runoff) calc(100% - 84px), var(--court) calc(100% - 84px), var(--court) 100%);
+  padding: 0 16px 120px;
+  overflow: hidden;
+}
+.bar {
+  max-width: 1080px; margin: 0 auto; padding: 18px 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand { display: flex; align-items: center; gap: 10px; font-family: "Luckiest Guy", cursive; font-size: 24px; text-decoration: none; letter-spacing: .5px; }
+.brand img { border-radius: 10px; }
+.navlink { font-weight: 800; text-decoration: none; opacity: .9; }
+.navlink:hover { opacity: 1; text-decoration: underline; }
+
+.hero-grid {
+  max-width: 1080px; margin: 24px auto 0;
+  display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center;
+}
+h1 {
+  font-family: "Luckiest Guy", cursive; font-weight: 400;
+  font-size: clamp(64px, 11vw, 132px); line-height: .92; margin: 0 0 18px;
+  text-shadow: 0 6px 0 rgba(13, 27, 51, .25);
+}
+h1 .w { display: block; }
+h1 .y { display: inline-block; color: var(--gold); transform: rotate(-4deg); }
+.lede { font-size: clamp(18px, 2.2vw, 22px); margin: 0 0 28px; max-width: 30ch; text-shadow: 0 1px 2px rgba(0,0,0,.25); }
+.store {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: #000; color: #fff; text-decoration: none;
+  padding: 10px 22px 10px 16px; border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  transition: transform .15s ease;
+}
+.store:hover { transform: translateY(-2px); }
+.store span { display: flex; flex-direction: column; font-weight: 800; font-size: 22px; line-height: 1.05; }
+.store small { font-weight: 600; font-size: 12px; opacity: .85; }
+.fine { font-size: 14px; opacity: .9; margin-top: 14px; }
+
+.phone {
+  justify-self: center; width: min(320px, 78vw); aspect-ratio: 590 / 1278;
+  border-radius: 46px; padding: 12px; background: #0b0f17;
+  box-shadow: 0 30px 60px rgba(8, 20, 50, .45), inset 0 0 0 2px #2a3140;
+  transform: rotate(3deg);
+}
+.phone video { width: 100%; height: 100%; object-fit: cover; border-radius: 36px; background: var(--court); }
+
+/* ---------- sections ---------- */
+main { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+section { padding: 72px 0 8px; }
+h2 { font-family: "Luckiest Guy", cursive; font-weight: 400; font-size: clamp(34px, 5vw, 48px); margin: 0 0 28px; color: var(--court); }
+h3 { margin: 8px 0 6px; font-size: 20px; }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.steps li { background: #fff; border-radius: 20px; padding: 24px; box-shadow: 0 6px 20px rgba(20, 50, 110, .08); }
+.steps b {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--optic); font-family: "Luckiest Guy", cursive; font-size: 22px; font-weight: 400;
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,.12);
+}
+.steps p, .feats p { margin: 0; color: #3a4a66; }
+.gold { color: #c99a00; font-weight: 800; }
+
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.shots img { border-radius: 26px; box-shadow: 0 14px 34px rgba(20, 50, 110, .18); }
+
+.feats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding-bottom: 72px; }
+.feats div { border-top: 4px solid var(--optic); padding-top: 14px; }
+
+/* ---------- plain pages (privacy, support) ---------- */
+.page { max-width: 720px; margin: 0 auto; padding: 24px 16px 72px; }
+.page h1 { font-size: clamp(40px, 7vw, 64px); color: var(--court); text-shadow: none; }
+.page h2 { font-size: 26px; margin: 32px 0 8px; }
+.page p, .page li { color: #2c3a55; }
+.topbar { background: var(--court); color: #fff; padding: 0 16px; }
+
+footer { background: var(--ink); color: #cfd8ea; text-align: center; padding: 36px 16px; font-size: 15px; }
+footer p { margin: 6px 0; }
+footer .tiny { font-size: 12px; opacity: .7; }
+
+@media (max-width: 820px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+  .lede { margin-left: auto; margin-right: auto; }
+  .steps, .feats { grid-template-columns: 1fr; }
+  .feats { grid-template-columns: 1fr 1fr; }
+  .shots { grid-template-columns: 1fr 1fr; }
+  .shots img:last-child { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .store, .phone { transition: none; transform: none; } }
