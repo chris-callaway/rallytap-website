@@ -63,6 +63,17 @@ h1 .y { display: inline-block; color: var(--gold); transform: rotate(-4deg); }
 .store span { display: flex; flex-direction: column; font-weight: 800; font-size: 22px; line-height: 1.05; }
 .store small { font-weight: 600; font-size: 12px; opacity: .85; }
 .fine { font-size: 14px; opacity: .9; margin-top: 14px; }
+.stores { display: flex; flex-wrap: wrap; gap: 12px; }
+.new {
+  display: inline-block; background: var(--optic); color: var(--ink);
+  font-family: "Luckiest Guy", cursive; font-weight: 400; font-size: .8em;
+  padding: 2px 10px 0; border-radius: 999px; transform: rotate(-4deg); vertical-align: middle;
+}
+/* ---------- online ---------- */
+.online .lede2 { font-size: 20px; margin: -12px 0 20px; }
+.ticks { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 28px; }
+.ticks li { background: #fff; border-radius: 16px; padding: 16px 18px; box-shadow: 0 6px 20px rgba(20, 50, 110, .08); color: #3a4a66; }
+.ticks b { color: var(--ink); }
 
 .phone {
   justify-self: center; width: min(320px, 78vw); aspect-ratio: 590 / 1278;
@@ -108,6 +119,8 @@ footer .tiny { font-size: 12px; opacity: .7; }
   .hero-grid { grid-template-columns: 1fr; gap: 36px; text-align: center; }
   .lede { margin-left: auto; margin-right: auto; }
   .steps, .feats { grid-template-columns: 1fr; }
+  .stores { justify-content: center; }
+  .ticks { grid-template-columns: 1fr; }
   .feats { grid-template-columns: 1fr 1fr; }
   .shots { grid-template-columns: 1fr 1fr; }
   .shots img:last-child { display: none; }
