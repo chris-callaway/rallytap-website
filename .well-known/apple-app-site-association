@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["FVD8SMFC87.com.gazellia.rallytap"],
+        "components": [
+          { "/": "/j/*", "comment": "A texted invite to a Rally Tap match" }
+        ]
+      }
+    ]
+  }
+}

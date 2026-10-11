@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join my Rally Tap match</title>
+<meta name="description" content="You're invited to a Rally Tap tennis match. Open the app to join, or get it free on iPhone and Android.">
+<meta property="og:title" content="Join my Rally Tap match">
+<meta property="og:description" content="Tap to join. Swipe to swing, play tennis 1-on-1 or doubles. Free on iPhone and Android.">
+<meta property="og:image" content="https://playrallytap.com/assets/shot-online.jpg">
+<meta name="theme-color" content="#2b6cc8">
+<meta name="robots" content="noindex">
+<meta name="apple-itunes-app" content="app-id=6820683042">
+<link rel="icon" href="/assets/icon.png">
+<link rel="apple-touch-icon" href="/assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .join { min-height: 100vh; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 28px 16px 130px; }
+  .join .card { max-width: 520px; width: 100%; margin-top: 18px; }
+  .join h1 { font-size: clamp(44px, 12vw, 72px); margin: 8px 0 4px; }
+  .join .invite { font-weight: 800; font-size: 20px; margin: 6px 0 18px; }
+  .code {
+    font-family: "Luckiest Guy", cursive; font-size: clamp(56px, 18vw, 92px); letter-spacing: .08em;
+    background: rgba(0,0,0,.28); border-radius: 22px; padding: 12px 18px 2px; margin: 0 auto 8px; display: inline-block;
+  }
+  .label { font-size: 14px; letter-spacing: .12em; opacity: .9; text-transform: uppercase; }
+  .open {
+    display: block; margin: 22px auto 10px; max-width: 360px; background: var(--gold); color: var(--ink);
+    font-family: "Luckiest Guy", cursive; font-size: 30px; text-decoration: none; padding: 16px 20px 10px;
+    border-radius: 999px; box-shadow: 0 10px 26px rgba(0,0,0,.28);
+  }
+  .howto { text-align: left; background: rgba(0,0,0,.22); border-radius: 18px; padding: 14px 18px 14px 36px; margin: 18px auto; max-width: 440px; }
+  .howto li { margin: 6px 0; }
+  .join .stores { justify-content: center; margin-top: 8px; }
+  .bad { display: none; }
+  .nocode .has { display: none; }
+  .nocode .bad { display: block; }
+</style>
+</head>
+<body>
+<main class="hero join" id="join">
+  <nav class="bar">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="" width="40" height="40"> Rally Tap</a>
+  </nav>
+  <div class="card">
+    <h1><span class="w">RALLY</span> <span class="y">TAP</span></h1>
+    <p class="invite has">You're invited to a tennis match!</p>
+    <div class="has">
+      <div class="label">Match code</div>
+      <div class="code" id="code">-----</div>
+      <a class="open" id="open" href="rallytap://join">OPEN RALLY TAP</a>
+      <ol class="howto">
+        <li>Don't have it yet? Get it free below. It takes a minute.</li>
+        <li>Open Rally Tap and tap <strong>PLAY ONLINE</strong>.</li>
+        <li>Tap <strong>JOIN WITH CODE</strong> and type <strong id="code2">the code</strong>.</li>
+      </ol>
+      <p class="fine">Hurry: the match waits for you while your friend sets it up.</p>
+    </div>
+    <div class="bad">
+      <p class="invite">This invite link is missing its match code.</p>
+      <p class="fine">Ask your friend to send it again, or open Rally Tap and tap PLAY ONLINE.</p>
+    </div>
+    <div class="stores">
+      <a class="store" href="https://apps.apple.com/app/id6820683042" aria-label="Rally Tap on the App Store">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.32.8-.69 0-1.74-.78-2.86-.76-1.47.02-2.83.86-3.59 2.17-1.53 2.65-.39 6.58 1.1 8.73.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.31-3.49ZM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.65-1.05 1.69-.92 2.68.97.08 1.96-.49 2.56-1.23Z"/></svg>
+        <span><small>Free on the</small>App Store</span>
+      </a>
+      <a class="store" href="https://play.google.com/store/apps/details?id=com.gazellia.rallytap" aria-label="Rally Tap on Google Play">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M3.6 2.2c-.3.3-.5.8-.5 1.4v16.8c0 .6.2 1.1.5 1.4l.1.1 9.4-9.4v-.2L3.7 2.1l-.1.1Zm12.6 12.9-3.1-3.1v-.2l3.1-3.1.1.1 3.7 2.1c1.1.6 1.1 1.6 0 2.2l-3.7 2.1-.1-.1Zm-.1.1L12.9 12l-9.3 9.4c.3.4.9.4 1.6 0l10.9-6.2m0-6.4L5.2 2.6c-.7-.4-1.3-.4-1.6 0l9.3 9.4 3.2-3.2Z"/></svg>
+        <span><small>Get it on</small>Google Play</span>
+      </a>
+    </div>
+    <p class="fine"><a href="/privacy.html" style="color:inherit">Privacy</a> · The link only holds the match code.</p>
+  </div>
+</main>
+<script>
+  // The code comes from ?c=K7QXP (what the app texts). Only letters and digits,
+  // five of them; anything else is treated as a broken link.
+  (function () {
+    var raw = new URLSearchParams(location.search).get('c') || '';
+    var code = raw.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 5);
+    if (code.length !== 5) { document.getElementById('join').classList.add('nocode'); return; }
+    document.getElementById('code').textContent = code;
+    document.getElementById('code2').textContent = code;
+    document.getElementById('open').href = 'rallytap://join/' + code;
+    document.title = 'Join my Rally Tap match: ' + code;
+  })();
+</script>
+</body>
+</html>
