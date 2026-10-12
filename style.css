@@ -99,7 +99,7 @@ h3 { margin: 8px 0 6px; font-size: 20px; }
 .gold { color: #c99a00; font-weight: 800; }
 
 .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.shots img { border-radius: 26px; box-shadow: 0 14px 34px rgba(20, 50, 110, .18); }
+.shots img { width: 100%; height: auto; border-radius: 26px; box-shadow: 0 14px 34px rgba(20, 50, 110, .18); }
 
 .feats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding-bottom: 72px; }
 .feats div { border-top: 4px solid var(--optic); padding-top: 14px; }
